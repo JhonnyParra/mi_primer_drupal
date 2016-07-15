@@ -69,5 +69,53 @@ $claseHereda=new claseHereda();
 //echo $claseHereda->varpublic;
 $claseHereda->prueba();
 //$claseNueva->contar();
+/*prueba de trair con un metodo de una clase*/
+
+class padre{
+  public function holaMundo($valor1){
+    if($valor1== "hola"){
+      echo "<br>funciona (?)";
+    }
+      else{
+      echo "<br>no funciono";
+    }
+  }
+}
+
+trait nuevoTrait{
+  public function holaMundo($valor1){
+    padre::holaMundo($valor1);
+    echo "<br>funciona";
+  }
+}
+
+class hijoDePadre{
+  use nuevoTrait;
+}
+
+$hijoDePadre = new hijoDePadre();
+$hijoDePadre->holaMundo("hola");
 
 ?>
+    <?php
+        //write your do-while loop below
+        $fueraDoWhile=false;
+        $contador=0;
+        do{
+            $contador++;
+            $aleatoreo= rand(1,50);
+            if ($aleatoreo != 20){
+                echo "<br>el numero fue {$aleatoreo}";
+            }
+            else{
+                $fueraDoWhile=true;
+            }
+        }
+        while($fueraDoWhile == false);
+        echo "<br>El bucle se realizo ".$contador." veces";
+
+echo"<br>";
+        $rest = substr("abcdef", -3);
+        print $rest;
+echo "<br>";
+    ?>

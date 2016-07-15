@@ -1,0 +1,14 @@
+name = Perfil de Prueba
+description = this is a new profile by.
+core = 7.x
+dependencies[] = block
+dependencies[] = color
+dependencies[] = menu
+dependencies[] = help
+dependencies[] = taxonomy
+dependencies[] = user
+dependencies[] = toolbar
+dependencies[] = search
+dependencies[] = profile
+dependencies[] = system
+;
